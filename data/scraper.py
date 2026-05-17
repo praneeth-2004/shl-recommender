@@ -1,0 +1,34 @@
+import json
+
+data = [
+    {
+        "title": "Verify G+ General Ability",
+        "description": "Measures general cognitive ability including numerical, verbal, and inductive reasoning.",
+        "link": "https://www.shl.com"
+    },
+    {
+        "title": "Verify Numerical Reasoning",
+        "description": "Assesses numerical problem-solving and data interpretation skills.",
+        "link": "https://www.shl.com"
+    },
+    {
+        "title": "Verify Verbal Reasoning",
+        "description": "Measures ability to understand written information and draw conclusions.",
+        "link": "https://www.shl.com"
+    },
+    {
+        "title": "Occupational Personality Questionnaire (OPQ)",
+        "description": "Assesses workplace personality and behavioral style.",
+        "link": "https://www.shl.com"
+    },
+    {
+        "title": "Situational Judgement Test",
+        "description": "Evaluates decision-making in workplace scenarios.",
+        "link": "https://www.shl.com"
+    }
+]
+
+with open("data/shl_data.json", "w") as f:
+    json.dump(data, f, indent=2)
+
+print("Dummy SHL data created")
