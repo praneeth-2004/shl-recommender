@@ -44,3 +44,7 @@ def chat(req: ChatRequest):
         "message": result.get("message"),
         "recommendations": result.get("recommendations"),
     }
+
+@app.get("/")
+def home():
+    return {"status": "ok", "message": "API is running"}
