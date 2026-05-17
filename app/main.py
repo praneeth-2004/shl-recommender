@@ -4,6 +4,12 @@ from app.agent import generate_response
 import os
 from app.rag import build_vector_db
 
+port = int(os.environ.get("PORT", 8000))
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=port)
+
 app = FastAPI()
 
 if not os.path.exists("chroma_db"):
