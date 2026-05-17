@@ -33,9 +33,12 @@ export default function Home() {
         Submit
       </button>
 
-      <pre style={{ marginTop: 20 }}>
-        {result && JSON.stringify(result, null, 2)}
-      </pre>
+      {result?.recommendations?.map((rec: any, i: number) => (
+  <div key={i} style={{ marginTop: 10 }}>
+    <h3>{rec.name}</h3>
+    <p>{rec.description}</p>
+  </div>
+))}
     </div>
   );
 }
